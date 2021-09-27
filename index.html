@@ -1,47 +1,219 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Hello! ROKU TV</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://github.com/google/shaka-packager version v2.5.1-9f11077768-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT2758.172119140625S">
+  <Period id="0">
+    <AdaptationSet id="0" contentType="audio" lang="DD+" subsegmentAlignment="true">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Representation id="0" bandwidth="194310" codecs="ec-3" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="tag:dolby.com,2014:dash:audio_channel_configuration:2011" value="F801"/>
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_51_en-US_771684_1_imf_eac3_192.mp4</BaseURL>
+        <SegmentBase indexRange="1767-7318" timescale="48000">
+          <Initialization range="0-1766"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="audio" lang="en" subsegmentAlignment="true">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Representation id="1" bandwidth="131256" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_20_en-US_771684_3_imf_aac_128.mp4</BaseURL>
+        <SegmentBase indexRange="1854-7405" timescale="48000">
+          <Initialization range="0-1853"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="2" contentType="audio" lang="en" subsegmentAlignment="true">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Accessibility schemeIdUri="urn:tva:metadata:cs:AudioPurposeCS:2007" value="1"/>
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="description"/>
+      <Representation id="2" bandwidth="131259" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>CBS_THE_GOOD_FIGHT_509_DVS_dvs_771684_4_imf_dvs_128.mp4</BaseURL>
+        <SegmentBase indexRange="1854-7405" timescale="48000">
+          <Initialization range="0-1853"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="3" contentType="video" maxWidth="3840" maxHeight="2160" frameRate="24000/1001" subsegmentAlignment="true" par="16:9">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Representation id="3" bandwidth="874206" codecs="dvhe.05.01" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_625.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="4" bandwidth="1471556" codecs="dvhe.05.01" mimeType="video/mp4" sar="1:1" width="960" height="540">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_1100.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="5" bandwidth="3151402" codecs="dvhe.05.01" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_2400.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="6" bandwidth="6463870" codecs="dvhe.05.03" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_5010.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="7" bandwidth="9347861" codecs="dvhe.05.05" mimeType="video/mp4" sar="1:1" width="2560" height="1440">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_7500.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="8" bandwidth="12408994" codecs="dvhe.05.06" mimeType="video/mp4" sar="1:1" width="3840" height="2160">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_9900.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="9" bandwidth="18307436" codecs="dvhe.05.06" mimeType="video/mp4" sar="1:1" width="3840" height="2160">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_DoVi_771684_15000.mp4</BaseURL>
+        <SegmentBase indexRange="1910-7461" timescale="24000">
+          <Initialization range="0-1909"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="4" contentType="video" maxWidth="3840" maxHeight="2160" frameRate="24000/1001" subsegmentAlignment="true" par="16:9">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Representation id="10" bandwidth="841564" codecs="hvc1.2.4.L63.90" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_610.mp4</BaseURL>
+        <SegmentBase indexRange="1980-7531" timescale="24000">
+          <Initialization range="0-1979"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="11" bandwidth="1319225" codecs="hvc1.2.4.L90.90" mimeType="video/mp4" sar="1:1" width="960" height="540">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_1000.mp4</BaseURL>
+        <SegmentBase indexRange="1980-7531" timescale="24000">
+          <Initialization range="0-1979"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="12" bandwidth="3042162" codecs="hvc1.2.4.L93.90" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_2300.mp4</BaseURL>
+        <SegmentBase indexRange="1981-7532" timescale="24000">
+          <Initialization range="0-1980"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="13" bandwidth="6027783" codecs="hvc1.2.4.L120.90" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_4800.mp4</BaseURL>
+        <SegmentBase indexRange="1980-7531" timescale="24000">
+          <Initialization range="0-1979"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="14" bandwidth="8811849" codecs="hvc1.2.4.L150.90" mimeType="video/mp4" sar="1:1" width="2560" height="1440">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_7000.mp4</BaseURL>
+        <SegmentBase indexRange="1982-7533" timescale="24000">
+          <Initialization range="0-1981"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="15" bandwidth="11677586" codecs="hvc1.2.4.L150.90" mimeType="video/mp4" sar="1:1" width="3840" height="2160">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_9500.mp4</BaseURL>
+        <SegmentBase indexRange="1983-7534" timescale="24000">
+          <Initialization range="0-1982"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="16" bandwidth="18589055" codecs="hvc1.2.4.H150.90" mimeType="video/mp4" sar="1:1" width="3840" height="2160">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HDR10plus_771684_14900.mp4</BaseURL>
+        <SegmentBase indexRange="1983-7534" timescale="24000">
+          <Initialization range="0-1982"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="5" contentType="video" maxWidth="1920" maxHeight="1080" frameRate="24000/1001" subsegmentAlignment="true" par="16:9">
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="055ba293-72cd-4acd-85af-51ae281df0ee"/>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+        <cenc:pssh>AAAAWHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAADgIARIQBVuik3LNSs2Fr1GuKB3w7iIgTktzNnVzRlRKdlExMkxUc0phb1pvOHFDamhENjFnSzY4AQ==</cenc:pssh>
+      </ContentProtection>
+      <ContentProtection value="MSPR 2.0" schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+        <cenc:pssh>AAADXHBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAzw8AwAAAQABADIDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBrADYASgBiAEIAYwAxAHkAegBVAHEARgByADEARwB1AEsAQgAzAHcANwBnAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AEgANQBQAEsAagBUADIANQBaAEIAbwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAGMAYgBzAGkALgBsAGkAdgBlAC4AbwB0AHQALgBpAHIAZABlAHQAbwAuAGMAbwBtAC8AcABsAGEAeQByAGUAYQBkAHkALwByAGkAZwBoAHQAcwBtAGEAbgBhAGcAZQByAC4AYQBzAG0AeAA/AEMAcgBtAEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AEEAYwBjAG8AdQBuAHQASQBkAD0AYwBiAHMAaQAmAGEAbQBwADsAYwBvAG4AdABlAG4AdABJAGQAPQBOAEsAcwA2AHUAcwBGAFQASgB2AFEAMQAyAEwAVABzAEoAYQBvAFoAbwA4AHEAQwBqAGgARAA2ADEAZwBLADYAPAAvAEwAQQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</cenc:pssh>
+        <mspr:pro>PAMAAAEAAQAyAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AawA2AEoAYgBCAGMAMQB5AHoAVQBxAEYAcgAxAEcAdQBLAEIAMwB3ADcAZwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBIADUAUABLAGoAVAAyADUAWgBCAG8APQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBjAGIAcwBpAC4AbABpAHYAZQAuAG8AdAB0AC4AaQByAGQAZQB0AG8ALgBjAG8AbQAvAHAAbABhAHkAcgBlAGEAZAB5AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBDAHIAbQBJAGQAPQBjAGIAcwBpACYAYQBtAHAAOwBBAGMAYwBvAHUAbgB0AEkAZAA9AGMAYgBzAGkAJgBhAG0AcAA7AGMAbwBuAHQAZQBuAHQASQBkAD0ATgBLAHMANgB1AHMARgBUAEoAdgBRADEAMgBMAFQAcwBKAGEAbwBaAG8AOABxAEMAagBoAEQANgAxAGcASwA2ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+      </ContentProtection>
+      <Representation id="17" bandwidth="813378" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="640" height="360">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HEVC_771684_4000_771684_380.mp4</BaseURL>
+        <SegmentBase indexRange="1903-7454" timescale="24000">
+          <Initialization range="0-1902"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="18" bandwidth="1710393" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="960" height="540">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HEVC_771684_4000_771684_800.mp4</BaseURL>
+        <SegmentBase indexRange="1903-7454" timescale="24000">
+          <Initialization range="0-1902"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="19" bandwidth="3428463" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HEVC_771684_4000_771684_1600.mp4</BaseURL>
+        <SegmentBase indexRange="1902-7453" timescale="24000">
+          <Initialization range="0-1901"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="20" bandwidth="6327701" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HEVC_771684_4000_771684_2900.mp4</BaseURL>
+        <SegmentBase indexRange="1904-7455" timescale="24000">
+          <Initialization range="0-1903"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="21" bandwidth="9570240" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>THE_GOOD_FIGHT_0509_JPEG2000_HEVC_771684_4000_771684_4600.mp4</BaseURL>
+        <SegmentBase indexRange="1904-7455" timescale="24000">
+          <Initialization range="0-1903"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="6" contentType="text" lang="en" subsegmentAlignment="true">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="subtitle"/>
+      <Representation id="22" bandwidth="320" mimeType="text/vtt">
+        <BaseURL>en.vtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="7" mimeType="image/jpeg" contentType="image">
+      <SegmentTemplate media="$RepresentationID$/tile_$Number$.jpg" duration="320" startNumber="1"/>
+      <Representation bandwidth="27759" id="thumb_160x90" width="640" height="720">
+        <EssentialProperty schemeIdUri="http://dashif.org/guidelines/thumbnail_tile" value="4x8"/>
+      </Representation>
+      <Representation bandwidth="104607" id="thumb_320x180" width="1280" height="1440">
+        <EssentialProperty schemeIdUri="http://dashif.org/guidelines/thumbnail_tile" value="4x8"/>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
 
-    <style type="text/css">
-     
-body {
-  width:100%;
-  background:black;
-}
-@font-face {
-    font-family: 'ExquisiteCorpse';
-    src: url('http://ashandrien.com/fonts/exquisitecorpse.eot');
-    src: url('http://ashandrien.com/fonts/exquisitecorpse.eot?#iefix') format('embedded-opentype'),
-         url('http://ashandrien.com/fonts/exquisitecorpse.woff') format('woff'),
-         url('http://ashandrien.com/fonts/exquisitecorpse.ttf') format('truetype'),
-         url('http://ashandrien.com/fonts/exquisitecorpse.svg#exquisitecorpse') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-h1 {
-  font-family:'ExquisiteCorpse', Jokerman, Marker Felt;
-  font-color:white;
-  margin:100px auto;
-  width:25%;
-  font-size:7em;
-  transition:all 3s ease-in-out;
-	-webkit-transition:all 3s ease-in-out;
-	-moz-transition:all 3s ease-in-out;
-  -o-transition:all 15s ease-in-out;
-  color:white;
-  text-shadow: 0px 0px 5px #888;
-}
-}
-h1 {
-    
-}
-    </style> 
-
-  </head>
-  <body>
-    <p></p>
-    <h1 class="dead-dude">Hello! ROKU TV</h1>
-  </body>
-</html>
